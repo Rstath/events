@@ -17,7 +17,6 @@ const Home = ({ favorites, toggleFavorite, ratings, handleRating }) => {
   const [keyword, setKeyword] = useState('');
   const [showFilters, setShowFilters] = useState(false);
   const [filteredEvents, setFilteredEvents] = useState(Data);
-  const [showAllEvents, setShowAllEvents] = useState(true);
   const [sortingMethod, setSortingMethod] = useState('default');
   const [filterMethod, setFilterMethod] = useState('');
   const datePickerRef = useRef(null);
@@ -56,12 +55,10 @@ const Home = ({ favorites, toggleFavorite, ratings, handleRating }) => {
     }
 
     setFilteredEvents(filtered);
-    setShowAllEvents(false);
   }, [keyword, date, price, filterMethod]);
 
   const handleSearch = () => {
     applyFilters();
-    sortEvents(sortingMethod);
   };
 
   const handleReset = () => {
@@ -69,7 +66,6 @@ const Home = ({ favorites, toggleFavorite, ratings, handleRating }) => {
     setDate(null);
     setPrice(50);
     setFilteredEvents(Data);
-    setShowAllEvents(true);
     setSortingMethod('default');
     setFilterMethod('');
   };
@@ -94,12 +90,11 @@ const Home = ({ favorites, toggleFavorite, ratings, handleRating }) => {
 
   const handleSortingChange = (e) => {
     setSortingMethod(e.target.value);
-    handleSearch();
   };
 
   const handleFilterChange = (method) => {
     setFilterMethod(method);
-    handleSearch();
+    applyFilters();
   };
 
   const sortEvents = useCallback((method) => {
@@ -116,10 +111,6 @@ const Home = ({ favorites, toggleFavorite, ratings, handleRating }) => {
     }
     setFilteredEvents(sortedEvents);
   }, [filteredEvents]);
-
-  useEffect(() => {
-    applyFilters();
-  }, [applyFilters]);
 
   useEffect(() => {
     sortEvents(sortingMethod);
@@ -241,7 +232,6 @@ const Home = ({ favorites, toggleFavorite, ratings, handleRating }) => {
           </select>
         </div>
         <Main events={filteredEvents} 
-          showAllEvents={showAllEvents} 
           favorites={favorites}
           toggleFavorite={toggleFavorite}
           ratings={ratings}
