@@ -1,0 +1,138 @@
+.news {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-color);
+    padding: 20px;
+}
+
+.newsContent {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.newsTitle {
+    font-size: 1.5rem;
+    /* Reduced font size */
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.newsDescription {
+    font-size: 1rem;
+    /* Reduced font size */
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.newsArticles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.article {
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 5px;
+}
+
+.articleTitle {
+    font-size: 1.2rem;
+    /* Reduced font size */
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.articleContent {
+    font-size: 0.9rem;
+    /* Reduced font size */
+    color: var(--text-color);
+}
+
+.swiper-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.slideContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.slideImage {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.slideTitle {
+    font-size: 1.2rem;
+    /* Reduced font size */
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.slideDescription {
+    font-size: 0.9rem;
+    /* Reduced font size */
+    color: var(--text-color);
+}
+
+/* Swiper arrow styles */
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color);
+    width: 25px;
+    /* Smaller arrow size */
+    height: 25px;
+    /* Smaller arrow size */
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .newsTitle {
+        font-size: 1.2rem;
+    }
+
+    .newsDescription {
+        font-size: 0.9rem;
+    }
+
+    .articleTitle {
+        font-size: 1rem;
+    }
+
+    .articleContent {
+        font-size: 0.8rem;
+    }
+
+    .slideTitle {
+        font-size: 1rem;
+    }
+
+    .slideDescription {
+        font-size: 0.8rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        display: none;
+    }
+}

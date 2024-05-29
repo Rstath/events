@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: 'Reddit Sans', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+/*Set the styling of all primary and secondary UI elements */
+
+/* colors */
+:root {
+  --primary-color: hsl(199, 100%, 33%);
+  --secondary-color: hsl(187, 85%, 43%);
+  --grandient-color: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  --background-color: hsl(0, 0%, 100%);
+  --text-color: hsl(201, 33%, 16%);
+  --black-color: hsl(201, 33%, 16%);
+  --grey-text: hsl(240, 4%, 36%);
+  --input-color: rgb(239, 239, 239);
+  --body-color: rgb(240, 240, 246);
+  --card-background: rgb(225, 225, 235);
+  --card-background-hover: rgb(225, 225, 255);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-bottom: auto;
+}
+
+/* links */
+a {
+  text-decoration: none;
+}
+
+/* buttons */
+.button {
+  padding: 10px 24px;
+  background: var(--grandient-color);
+  border-radius: 48px;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--secondary-color);
+}
+
+/* inputs */
+
+input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  font-weight: 500;
+  width: 100%;
+  color: var(--primary-color);
+}
+
+input::placeholder {
+  color: var(--secondary-color);
+}
+
+/* lists */
+li {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid {
+  display: grid;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.section {
+  padding: 64px 0 32px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.container {
+  padding: 0 24px;
+}
+
+.icon {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  background: var(--body-color);
+}
+
+@media screen and (min-width:1240px) {
+  .container {
+    width: 80% !important;
+    margin: auto !important;
   }
-  to {
-    transform: rotate(360deg);
+
+  .section {
+    padding: 96px 0 64px;
+  }
+}
+
+@media screen and (min-width:2560px) {
+  body {
+    zoom: 1.7;
   }
 }

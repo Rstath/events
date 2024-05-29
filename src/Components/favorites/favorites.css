@@ -1,0 +1,234 @@
+.favorites {
+    padding: 40px;
+    background-color: var(--primary-color-light);
+}
+
+.sectionTitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 48px;
+    margin-bottom: 48px;
+}
+
+.favoritesTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.favoritesQuantity {
+    background: var(--primary-color);
+    padding: 4px 10px;
+    font-weight: 800;
+    color: var(--input-color);
+    border-radius: 10px;
+}
+
+.favoritesContent {
+    padding: 24px;
+    background: var(--primary-color);
+}
+
+.favoritesEventIcon {
+    height: 30vh;
+    width: 20vw;
+}
+
+.favoritesEvent {
+    background: var(--input-color);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.favoritesEventInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.favoritesEventInfo .eventTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: -4px;
+}
+
+.favoritesEventInfo {
+    color: var(--primary-color);
+}
+
+.favoritesEventInfo .eventTitle:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.favoritesEventInfo strong {
+    color: var(--secondary-color);
+}
+
+.favoriteIconBtn {
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.noFavorites {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 24px;
+    text-align: center;
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.confirmationModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--input-color);
+    padding: 24px;
+    border-radius: 16px;
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    transition: .3s ease-in-out;
+}
+
+.confirmationModalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modalText {
+    color: var(--primary-color);
+    margin: 24px 0;
+    font-weight: 600;
+}
+
+.closeIcon {
+    font-size: 24px;
+}
+
+.modalButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modalButton {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    width: max-content;
+    transform: translate(-50%);
+    cursor: pointer;
+}
+
+.removeFavorite {
+    background: var(--grandient-color);
+    color: var(--background-color);
+}
+
+.removeFavorite:hover {
+    background: var(--primary-color);
+}
+
+.cancelFavorite {
+    background: var(--card-background);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.cancelFavorite:hover {
+    background: var(--grandient-color);
+    color: var(--background-color);
+}
+
+.modal-open {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 767px) {
+    .favorites {
+        padding: 20px;
+    }
+
+    .sectionTitle {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .favoritesTitle {
+        font-size: 20px;
+    }
+
+    .favoritesQuantity {
+        font-size: 14px;
+    }
+
+    .favoritesContent {
+        padding: 16px;
+    }
+
+    .favoritesEventInfo {
+        margin-left: 16px;
+    }
+
+    .favoritesEventInfo .eventTitle:hover {
+        text-decoration: none;
+    }
+
+    .favoritesEventIcon {
+        height: auto;
+    }
+
+    .favoritesEvent {
+        padding: 16px;
+        margin-top: 12px;
+        position: relative;
+    }
+
+    .favoriteIconBtn {
+        position: absolute;
+        bottom: 10px;
+        left: 12px;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .confirmationModal {
+        bottom: 0;
+        top: auto;
+        left: 0;
+        transform: translate(0);
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .modalText {
+        margin: 42px;
+    }
+
+    .modalButtons {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .favoritesEvent {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .favoritesEventInfo {
+        width: 50%;
+    }
+}

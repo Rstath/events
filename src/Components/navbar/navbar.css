@@ -1,0 +1,123 @@
+.navbar__section {
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 0 20px 10px 20px;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+}
+
+.navbar__toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.logo {
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-text {
+    font-size: 25px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--background-color);
+}
+
+.navbar__list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__item {
+    margin: 0 20px;
+}
+
+.navbar__itemLink {
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar__item.active .navbar__itemLink {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+@media (max-width: 769px) {
+    .header {
+        justify-content: center;
+        padding: 24px 32px;
+    }
+
+    .navbar__toggle {
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 16px;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 0;
+        width: auto;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--background-color);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar.active {
+        display: flex;
+        z-index: 110;
+        margin-top: 22px;
+    }
+
+    .navbar__list {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 0 11.2px;
+    }
+
+    .navbar__item {
+        margin: 10px 0;
+    }
+
+    .navbar__itemLink {
+        color: var(--text-color);
+        padding: 0 7.2px;
+        text-align: center;
+    }
+
+    .navbar__item.active .navbar__itemLink {
+        color: var(--primary-color);
+        border-bottom: none;
+    }
+}
