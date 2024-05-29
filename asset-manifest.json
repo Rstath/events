@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/events/static/css/main.d7352e3d.css",
+    "main.js": "/events/static/js/main.123fcc52.js",
+    "static/media/homeBackground.jpeg": "/events/static/media/homeBackground.321c5df1a6947ac341ed.jpeg",
+    "static/media/event4.png": "/events/static/media/event4.9a26515f806545b6c6be.png",
+    "static/media/event1.png": "/events/static/media/event1.f9a471e6c71a6601d8ac.png",
+    "static/media/event7.png": "/events/static/media/event7.2375cd6933c893f66026.png",
+    "static/media/event9.png": "/events/static/media/event9.59bf578c1df8d9b46c45.png",
+    "static/media/winery.jpg": "/events/static/media/winery.2dae8dfad4a4bb347abf.jpg",
+    "static/media/roman.jpg": "/events/static/media/roman.f60a667add38336a3167.jpg",
+    "static/media/carnival.jpg": "/events/static/media/carnival.c7ff7153ac5c4c3453d2.jpg",
+    "static/media/event2.png": "/events/static/media/event2.b215c0345466b9bcf501.png",
+    "static/media/event10.png": "/events/static/media/event10.c7901cee84531221da13.png",
+    "static/media/event8.jpg": "/events/static/media/event8.b567e0181eb027adfa11.jpg",
+    "static/media/event6.jpg": "/events/static/media/event6.7ac0f94b8a82ac2c7472.jpg",
+    "static/media/castle.jpg": "/events/static/media/castle.450dd617335cb3fa3d2b.jpg",
+    "static/media/event11.jpg": "/events/static/media/event11.ad1c5f8241004e79f4d7.jpg",
+    "static/media/bridge.jpg": "/events/static/media/bridge.0cae43150f16e8121648.jpg",
+    "static/media/event3.jpg": "/events/static/media/event3.ebd1bcf6886dbc59fb00.jpg",
+    "static/media/event5.jpg": "/events/static/media/event5.87c6a96bd8715ae856e0.jpg",
+    "index.html": "/events/index.html",
+    "main.d7352e3d.css.map": "/events/static/css/main.d7352e3d.css.map",
+    "main.123fcc52.js.map": "/events/static/js/main.123fcc52.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d7352e3d.css",
+    "static/js/main.123fcc52.js"
+  ]
+}
